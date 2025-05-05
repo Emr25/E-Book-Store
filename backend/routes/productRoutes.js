@@ -1,9 +1,26 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const authMiddleware = require("../middleware/authMiddleware");
-const { createProduct, getProducts } = require("../controllers/productController");
+const {
+    createProduct,
+    getAllProducts,
+    getProductById,
+    updateProduct,
+    deleteProduct
+} = require('../controllers/productController');
 
-router.post("/", authMiddleware, createProduct); // Token gerektirir
-router.get("/", getProducts); // Herkes görebilir
+// POST /api/products
+router.post('/', createProduct);
+
+// GET /api/products
+router.get('/', getAllProducts);
+
+// GET /api/products/:id
+router.get('/:id', getProductById);
+
+// PUT /api/products/:id
+router.put('/:id', updateProduct);
+
+// DELETE /api/products/:id
+router.delete('/:id', deleteProduct);
 
 module.exports = router;
