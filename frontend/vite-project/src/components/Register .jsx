@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { registerUser } from '../redux/authSlice';
+import { registerUser } from '../redux/AuthSlice';
 
 const Register = () => {
     const [username, setUsername] = useState(""); // 👈 yeni eklendi

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { logoutUser } from '../redux/authSlice';
+import { logoutUser } from '../redux/AuthSlice';
 import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = () => {
